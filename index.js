@@ -61,22 +61,22 @@ cec.turnTVOn().then(() => {
     return promise.delay(10000).then(() => {
 
         console.log('switching to source 1...');
-        cec.switchSource1().then(() => {
+        return cec.switchSource1().then(() => {
 
             return promise.delay(10000).then(() => {
 
                 console.log('switching to source 2...');
-                cec.switchSource2().then(() => {
+                return cec.switchSource2().then(() => {
 
                     return promise.delay(10000).then(() => {
 
                         console.log('increasing volume...');
-                        cec.volumeUp().then(() => {
+                        return cec.volumeUp().then(() => {
 
                             return promise.delay(10000).then(() => {
 
                                 console.log('decreasing volume...');
-                                cec.volumeDown().then(() => {
+                                return cec.volumeDown().then(() => {
 
                                     return promise.delay(10000).then(() => {
 
